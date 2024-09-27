@@ -10,7 +10,7 @@ def print_diamond(n):
 
     # Checker if n is odd
     if n % 2 == 0:
-        return "Please input an odd integer"
+        return "Invalid Input! Please input an odd integer"
 
     # Prints the top part of the diamond
     for i in range(1, n+1, 2):
@@ -22,5 +22,15 @@ def print_diamond(n):
         diamond_space = (n - i) // 2
         print(' ' * diamond_space + '*' * i)
 
-    # Ask the user for input of odd integer n
+# Ask the user for input of odd integer n
+# Example usage n = 5
+try:
+    n = int(input("\nPlease enter an odd integer for the diamond's width (n): "))
+    print("\n")
+    diamond = print_diamond(n)
+    if diamond:
+        print(diamond)
+except ValueError:
+    print("Invalid Input! Please enter a valid integer")
+
 # End
