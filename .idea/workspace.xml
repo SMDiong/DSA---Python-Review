@@ -27,6 +27,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.diamond_shape.executor": "Run",
     "Python.ohms_law_calculator.executor": "Run",
     "Python.temperature_conversion.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
