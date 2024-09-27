@@ -13,7 +13,7 @@ red = "\033[0;31m"
 
 while True:
     # Ask the user for input of temperature
-    print(green + "\nWelcome to the Temperature Converter!")
+    print(green + "\nWelcome to the Temperature Converter!\n")
     temp_value = float(input("Please input the value of the Temperature: "))
 
     while True:
@@ -37,10 +37,14 @@ while True:
             # Invalid Input
             print(red + "\nInvalid Input! Please type 'C' or 'F'" + green)
 
-    # Ask the user if they want to try again
-    try_again = input(green + "\nDo you want to try again? (Y/N): ")
-    if try_again.lower() != 'y':
-        print(blue + "\nThank you for using the program!")
-        break
-
+        # Ask if the user wants to try again
+        while True:
+            try_again = input(green + "\nDo you want to try again? (Y/N): " + green).strip().upper()
+            if try_again == 'Y':
+                break
+            elif try_again == 'N':
+                print(blue + "\nThank you for using the program!" + green)
+                exit()
+            else:
+                print(red + "\nInvalid input! Please enter 'Y' or 'N'." + green)
 # End
