@@ -13,7 +13,17 @@ temp_value = float(input("Please input the value of the Temperature: "))
 print("\nPlease select a conversion type")
 conversion_type = input("Type 'C' to convert from Celsius to Fahrenheit or type 'F' to convert from Fahrenheit to Celsius: ")
 
-# Conversion
-# Output the result
+# Conversion and Output result
+if conversion_type.upper() == 'C':
+    # Celsius to Fahrenheit
+    converted_celsius = (temp_value * 9/5) + 32
+    print(f"\n{temp_value}° Celsius is {converted_celsius}° Fahrenheit.")
+elif conversion_type.upper() == 'F':
+    # Fahrenheit to Celsius
+    converted_fahrenheit = (temp_value -32) * 5/9
+    print(f"\n{temp_value}° Fahrenheit is {converted_fahrenheit}° Celsius.")
+else:
+    # Invalid Input
+    print("\nInvalid Input! Please type 'C' or 'F'.")
 
 # End
