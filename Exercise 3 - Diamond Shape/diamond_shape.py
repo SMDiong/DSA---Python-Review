@@ -6,9 +6,21 @@
 # Write a Python function named print_diamond that takes an odd integer n as an argument and prints a diamond shape with a width of n using the * character.
 
 # Function for printing a diamond pattern of width n using '*' characters.
-# Checker if n is odd
-# Prints the top part of the diamond
-# Prints the bottom part of the diamond
-# Ask the user for input of odd integer n
-# End
+def print_diamond(n):
 
+    # Checker if n is odd
+    if n % 2 == 0:
+        return "Please input an odd integer"
+
+    # Prints the top part of the diamond
+    for i in range(1, n+1, 2):
+        diamond_space = (n - i) // 2
+        print(' ' * diamond_space + '*' * i)
+
+    # Prints the bottom part of the diamond
+    for i in range(n-2, 0, -2):
+        diamond_space = (n - i) // 2
+        print(' ' * diamond_space + '*' * i)
+
+    # Ask the user for input of odd integer n
+# End
